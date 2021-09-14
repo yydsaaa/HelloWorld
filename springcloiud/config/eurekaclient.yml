@@ -1,0 +1,33 @@
+# HelloWorld
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:10087/eureka/
+server:
+  port: 9898
+zipkin:
+  #base-url: http://127.0.0.1:9411/  #zipkin server的请求地址
+  sender:
+    #type: rabbit
+    type: web
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    listener: # 这里配置了重试策略
+      direct:
+        retry:
+          enabled: true
+      simple:
+        retry:
+          enabled: true
+  sleuth:
+    sampler:
+      percentage: 1.0
+spring:
+  application:
+    name: eurekaclient
+management:
+  security:
+    #关闭安全验证，否则访问refresh端点时会提示权限不足
+    enabled: false
