@@ -1,10 +1,9 @@
-# HelloWorld
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:10087/eureka/
 server:
   port: 11011
-spring：
+spring:
   application: 
     name: eurekaclient
