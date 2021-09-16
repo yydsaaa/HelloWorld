@@ -11,6 +11,6 @@ spring:
     host: localhost 
     port: 5672 
     username: guest
-    sleuth: 
-      sampler: 
-        percentage: 1.0
+  sleuth: 
+    sampler: 
+      percentage: 1.0
