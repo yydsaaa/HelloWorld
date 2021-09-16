@@ -5,8 +5,5 @@ eureka:
 server: 
   port: 11017 
 spring: 
-  zipkin:
-    base-url: http://localhost:9411 
-  sleuth:
-    sampler: 
-      percentage: 1.0
+  application: 
+  name: eurekaclient
